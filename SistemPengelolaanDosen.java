@@ -41,14 +41,14 @@ public class SistemPengelolaanDosen {
             System.out.println(d);
         }
     }
-
+// Menggunakan Algoritma sorting: Bubble Sort
     static void urutkanBerdasarkanNIDN() {
         for (int i = 0; i < daftarDosen.length - 1; i++) {
             for (int j = i + 1; j < daftarDosen.length; j++) {
                 if (daftarDosen[i].nidn.compareTo(daftarDosen[j].nidn) > 0) {
                     Dosen temp = daftarDosen[i];
                     daftarDosen[i] = daftarDosen[j];
-                    daftarDosen[j] = temp;
+                    daftarDosen[j] = temp; 
                 }
             }
         }
@@ -56,6 +56,7 @@ public class SistemPengelolaanDosen {
         tampilkanDataDosen();
     }
 
+    // Menggunakan Algoritma pencarian: Linear Search
     static void cariBerdasarkanNama() {
         System.out.print("\nMasukkan nama dosen yang dicari: ");
         String namaCari = scanner.nextLine().toLowerCase();
@@ -73,6 +74,7 @@ public class SistemPengelolaanDosen {
         }
     }
 
+    // Menggunakan Algoritma sorting: Selection Sort
     static void urutkanBerdasarkanMasaKerja() {
         for (int i = 0; i < daftarDosen.length - 1; i++) {
             for (int j = i + 1; j < daftarDosen.length; j++) {
@@ -86,4 +88,4 @@ public class SistemPengelolaanDosen {
         System.out.println("\nData dosen telah diurutkan berdasarkan masa kerja (descending):");
         tampilkanDataDosen();
     }
-}
+}   
